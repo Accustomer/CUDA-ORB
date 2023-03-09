@@ -532,7 +532,7 @@ namespace orb
 	{
 		int xi = blockIdx.x * X2 + threadIdx.x;
 		int yi = blockIdx.y * X2 + threadIdx.y;
-		if (xi < dwhp.x && yi < dwhp.z)
+		if (xi < dwhp.x && yi < dwhp.y)
 		{
 			int di = yi * dwhp.z + xi;
 			int si = (yi * swhp.z + xi) * factor;
