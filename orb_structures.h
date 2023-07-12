@@ -1,7 +1,6 @@
 #pragma once
 
 
-
 namespace orb
 {
 
@@ -13,10 +12,7 @@ namespace orb
 		int octave;
 		float score;
 		float angle;
-		unsigned char features[32];
 		int match;
-		int match_x;
-		int match_y;
 		int distance;
 	};
 
@@ -25,7 +21,7 @@ namespace orb
 	struct OrbData
 	{
 		int num_pts;         // Number of available ORB points
-		int max_pts;         // Number of allocated ORB points
+		//int max_pts;         // Number of allocated ORB points
 		OrbPoint* h_data;    // Host (CPU) data
 		OrbPoint* d_data;    // Device (GPU) data
 	};
@@ -34,9 +30,8 @@ namespace orb
 	/* Score type */
 	enum ScoreType
 	{
-		HARRIS_SCORE = 0, 
+		HARRIS_SCORE = 0,
 		FAST_SCORE = 1
 	};
 
 }
-

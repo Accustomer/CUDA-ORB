@@ -142,6 +142,16 @@ __device__ __inline__ T shuffle(T var, unsigned int lane, int width = 32) {
 }
 
 
+__device__ __inline__ int dealBorder(int i, int sz)
+{
+	if (i < 0)
+		return -i;
+	if (i >= sz)
+		return sz + sz - 2 - i;
+	return i;
+}
+
+
 /* Unsigned char value to int */
 inline __device__ int __uchar2int(unsigned char data)
 {

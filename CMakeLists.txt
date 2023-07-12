@@ -32,6 +32,8 @@ set(cuda_sources
   orb.h
   orb_structures.h
   cuda_utils.h
+  warmup.cu
+  warmup.h
 )  
 
 set(sources
